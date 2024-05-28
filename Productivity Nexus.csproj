@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13944925-FD59-4D70-9722-AF10B0098402}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Productivity_Nexus</RootNamespace>
+    <AssemblyName>Productivity Nexus</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Calendarr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Calendarr.Designer.cs">
+      <DependentUpon>Calendarr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\list.Designer.cs">
+      <DependentUpon>list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\list_parent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\list_parent.Designer.cs">
+      <DependentUpon>list_parent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Projects_all.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Projects_all.Designer.cs">
+      <DependentUpon>Projects_all.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Projects_all_parent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Projects_all_parent.Designer.cs">
+      <DependentUpon>Projects_all_parent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Projects_completed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Projects_completed.Designer.cs">
+      <DependentUpon>Projects_completed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Projects_completed_parent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Projects_completed_parent.Designer.cs">
+      <DependentUpon>Projects_completed_parent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Projects_in_progress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Projects_in_progress.Designer.cs">
+      <DependentUpon>Projects_in_progress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Projects_in_progress_parent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Projects_in_progress_parent.Designer.cs">
+      <DependentUpon>Projects_in_progress_parent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\add_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\add_list.Designer.cs">
+      <DependentUpon>add_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Add_project.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Add_project.Designer.cs">
+      <DependentUpon>Add_project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\delete_list.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\delete_list.Designer.cs">
+      <DependentUpon>delete_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\delete_project.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\delete_project.Designer.cs">
+      <DependentUpon>delete_project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\DBHelper.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_form.Designer.cs">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Calendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Calender.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Calender.Designer.cs">
+      <DependentUpon>Calender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Projects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Projects.Designer.cs">
+      <DependentUpon>Projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\files.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\files.Designer.cs">
+      <DependentUpon>files.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\files_parent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\files_parent.Designer.cs">
+      <DependentUpon>files_parent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\upload_files.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\upload_files.Designer.cs">
+      <DependentUpon>upload_files.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signup.Designer.cs">
+      <DependentUpon>signup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Components\Calendarr.resx">
+      <DependentUpon>Calendarr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\list.resx">
+      <DependentUpon>list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\list_parent.resx">
+      <DependentUpon>list_parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Projects_all.resx">
+      <DependentUpon>Projects_all.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Projects_all_parent.resx">
+      <DependentUpon>Projects_all_parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Projects_completed.resx">
+      <DependentUpon>Projects_completed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Projects_completed_parent.resx">
+      <DependentUpon>Projects_completed_parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Projects_in_progress.resx">
+      <DependentUpon>Projects_in_progress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Projects_in_progress_parent.resx">
+      <DependentUpon>Projects_in_progress_parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\add_list.resx">
+      <DependentUpon>add_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Add_project.resx">
+      <DependentUpon>Add_project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\delete_list.resx">
+      <DependentUpon>delete_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\delete_project.resx">
+      <DependentUpon>delete_project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_form.resx">
+      <DependentUpon>Main_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Calender.resx">
+      <DependentUpon>Calender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Projects.resx">
+      <DependentUpon>Projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resources\files.resx">
+      <DependentUpon>files.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\files_parent.resx">
+      <DependentUpon>files_parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\upload_files.resx">
+      <DependentUpon>upload_files.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signup.resx">
+      <DependentUpon>signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
